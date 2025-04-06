@@ -290,9 +290,8 @@ body {
 .box {
     margin-bottom: 20px;
 }
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
+/* Responsive Adjustments for iPhone 15 Pro Max */
+@media (max-width: 430px) {
     #menu-row {
         flex-direction: column;
         align-items: center;
@@ -387,24 +386,23 @@ body {
   #about-img img:hover {
     transform: scale(1.05);
   }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
+  /* Responsive Design for iPhone 15 Pro Max */
+@media (max-width: 430px) {
     #about-row {
-      flex-direction: column;
-      text-align: center;
+        flex-direction: column;
+        text-align: center;
     }
-  
+
     .about-col {
-      max-width: 100%;
-      padding: 10px;
+        max-width: 100%;
+        padding: 10px;
     }
-  
+
     #about-img img {
-      max-width: 90%;
+        max-width: 90%;
     }
-  }
-  
+}
+
 
   /* Contact Section Styling */
 #contact {
@@ -497,23 +495,23 @@ body {
     color: #2980b9;
   }
   
-  /* Responsive Design */
-  @media (max-width: 768px) {
+  /* Responsive Design for iPhone 15 Pro Max */
+@media (max-width: 430px) {
     #contact-row {
-      flex-direction: column;
-      text-align: center;
+        flex-direction: column;
+        text-align: center;
     }
-  
+
     #contact-col {
-      max-width: 100%;
-      padding: 20px;
+        max-width: 100%;
+        padding: 20px;
     }
-  
+
     .contact-info {
-      padding: 20px;
+        padding: 20px;
     }
-  }
-  
+}
+
 
 /* Hamburger Menu Styles */
 .hamburger {
@@ -538,9 +536,8 @@ body {
   margin: 0;
   padding: 0;
 }
-
-/* Mobile Navbar */
-@media (max-width: 768px) {
+/* Mobile Navbar for iPhone 15 Pro Max */
+@media (max-width: 430px) {
   #navbar ul {
       display: none;
       flex-direction: column;
@@ -553,6 +550,8 @@ body {
       padding: 20px;
       z-index: 1000;
   }
+}
+
 
   #navbar ul.active {
       display: flex;
