@@ -138,11 +138,37 @@ body {
   transform: scale(1.1);
 }
 
-/* Menu Section */
+/* Menu Section Styling */
 #menu {
-  padding: 60px 20px;
-  background-color: #fff;
+  font-family : 'Poppins', sans-serif;
   text-align: center;
+  padding: 50px 20px;
+}
+
+#menu h1 {
+  font-size: 2.2rem; /* Adjust font size to match "Chef" or "About Us" */
+  font-weight: 700;
+  color: #2c3e50; /* Dark text color */
+  margin-bottom: 40px;
+}
+
+#menu h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #e63946; /* Highlighted color for section titles */
+  margin-bottom: 20px;
+}
+
+#menu h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #333; /* Neutral color for item names */
+}
+
+#menu h4 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #e63946; /* Price color */
 }
 
 #section {
@@ -232,15 +258,16 @@ body {
 
 /* Chef Section */
 #chef {
-  padding: 60px 20px;
-  background-color: #f4f4f4;
+  font-family : 'Poppins', sans-serif;
   text-align: center;
+  padding: 50px 20px;
 }
 
 #section-title {
-  font-size: 2.5rem;
-  margin-bottom: 30px;
-  color: #333;
+  font-size: 3rem; /* Adjust font size to match "Chef" or "About Us" */
+  font-weight: 700;
+  color: #2c3e50; /* Dark text color */
+  margin-bottom: 40px;
 }
 
 .chef-row {
@@ -287,7 +314,7 @@ body {
 }
 
 #section-title {
-  font-size: 2.8rem;
+  font-size: 3rem;
   font-weight: 700;
   color: #222;
   margin-bottom: 40px;
@@ -474,7 +501,9 @@ body {
   text-align: center;
   margin-top: 50px;
   overflow: hidden; /* Ensures the background doesn't overflow */
+  margin-bottom: 0px;
 }
+
 .footer-background {
   position: absolute;
   top: 0;
@@ -485,6 +514,8 @@ body {
   filter: brightness(50%);
   z-index: 1; /* Places the background behind the content */
 }
+
+
 .footer-content {
   position: relative;
   z-index: 2; /* Places the text above the background */
@@ -503,7 +534,6 @@ body {
 
 /* Sticky Footer Styling */
 #footer {
-  position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -516,17 +546,142 @@ body {
   box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
 backdrop-filter: blur(10px); /* Optional: adds a blur effect */
   transition: background-color 0.3s ease, color 0.3s ease;
+  
+
 }
 
 #footer .footer-content p {
   margin: 5px 0;
   font-size: 0.9rem;
 }
+
 #footer .footer-content a {
   color: #ff8f2c; /* Link color */
   text-decoration: none;
   transition: color 0.3s ease;
 }
+
 #footer .footer-content a:hover {
   color: #f39c12; /* Hover effect for links */
 }
+
+/* Order Section Styles */
+#order {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#order-section, #cart-section {
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: center;
+}
+
+.food-item {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    width: 200px;
+}
+
+.food-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.food-item h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.food-item p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.food-item button {
+    padding: 10px 15px;
+    background-color: #ff6f61;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.food-item button:hover {
+    background-color: #e65b50;
+}
+
+#cart-items {
+    margin: 20px 0;
+    text-align: left;
+}
+
+/* Online Delivery Section */
+#delivery {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#delivery-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.delivery-col {
+    flex: 1 1 45%;
+    max-width: 500px;
+    text-align: left;
+}
+
+#delivery h1 {
+  font-family: 'Poppins', sans-serif; /* Match font with Foods section */
+  font-size: 3rem; /* Adjust font size */
+  font-weight: 700;
+  color: #2c3e50; /* Dark text color */
+}
+
+#delivery h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+#delivery p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+#delivery .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f39c12;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+#delivery .btn:hover {
+    background-color: #e65b50;
+}
+
+#delivery-img img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+
+
