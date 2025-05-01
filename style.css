@@ -5,6 +5,26 @@
   box-sizing: border-box;
 }
 
+/* Ensure the page takes up the full height of the viewport */
+html, body {
+  height: 100%;
+}
+
+/* Flexbox layout for the page */
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* Wrapper for the main content */
+.page-wrapper {
+  flex: 1; /* Allow the main content to grow and take up available space */
+  display: flex;
+  flex-direction: column;
+}
+
 /* Basic styles for the root and body */
 html {
   font-size: 110%;
@@ -12,9 +32,7 @@ html {
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
-  background-color: #f4f4f4;
 }
 
 /* Phone Number Styling */
@@ -49,7 +67,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/hero.jpeg) center/cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.04)), url(images/hero.jpg) center/cover no-repeat;
   filter: brightness(50%);
 }
 
@@ -72,7 +90,8 @@ body {
 }
 
 #hero_content a {
-  color: #fff;
+  color: whitesmoke;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
   padding: 12px 30px;
   border: 2px solid orange;
   background: orange (191, 193, 68, 0.21);
@@ -84,7 +103,7 @@ body {
 
 #hero_content a:hover {
   background-color: rgb(218, 129, 5);
-  border-color: white;
+  border-color: whitesmoke;
   transform: scale(1.05);
 }
 
@@ -143,6 +162,8 @@ body {
   font-family : 'Poppins', sans-serif;
   text-align: center;
   padding: 50px 20px;
+  
+
 }
 
 #menu h1 {
@@ -237,7 +258,7 @@ body {
 }
 
 /* Responsive Adjustments */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   #menu-row {
     flex-direction: column;
     align-items: center;
@@ -363,9 +384,157 @@ body {
 #about-img img:hover {
   transform: scale(1.05);
 }
-/* Contact Section Styling */
+
+/* Hamburger Menu Styles */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+  width: 30px;
+  height: 25px;
+}
+
+.hamburger span {
+  width: 100%;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 2px;
+}
+
+/* Mobile Navbar */
+@media (max-width: 1024px) {
+  #navbar ul {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(13, 9, 9, 0.8);
+    position: absolute;
+    top: 70px;
+    width: 100%;
+  }}
+  
+  /* Online Delivery Section */
+#delivery {
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+#delivery-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.delivery-col {
+  flex: 1 1 45%;
+  max-width: 500px;
+  text-align: left;
+}
+
+#delivery h1 {
+font-family: 'Poppins', sans-serif; /* Match font with Foods section */
+font-size: 3rem; /* Adjust font size */
+font-weight: 700;
+color: #2c3e50; /* Dark text color */
+}
+
+#delivery h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+#delivery p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+#delivery .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #f39c12;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+#delivery .btn:hover {
+  background-color: #e65b50;
+}
+
+#delivery-img img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+/* Order Section Styles */
+#order {
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+#order-section, #cart-section {
+  margin: 20px auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+.food-item {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: center;
+  width: 200px;
+}
+
+.food-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.food-item h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.food-item p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.food-item button {
+  padding: 10px 15px;
+  background-color: #ff6f61;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.food-item button:hover {
+  background-color: #e65b50;
+}
+
+#cart-items {
+  margin: 20px 0;
+  text-align: left;
+}
+
+  /* Contact Section Styling */
 #contact {
-  padding: 150px 20px; /* Updated padding */
+  padding: 200px 20px; /* Updated padding */
   background-color: #f5f5f5;
   text-align: center;
 }
@@ -417,11 +586,11 @@ body {
   margin-top: 30px;
 }
 
-.social-links {
+.social-links1 {
   margin-top: 15px;
 }
 
-.social-links a {
+.social-links1 a {
   font-size: 1.5rem;
   color: #34495e;
   margin: 0 15px;
@@ -429,12 +598,12 @@ body {
   transition: color 0.3s ease;
 }
 
-.social-links a:hover {
+.social-links1 a:hover {
   color: #2980b9;
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   #contact-row {
     flex-direction: column;
     text-align: center;
@@ -445,243 +614,110 @@ body {
   }
 }
 
-/* Hamburger Menu Styles */
-.hamburger {
-  display: none;
-  cursor: pointer;
-  flex-direction: column;
-  gap: 5px;
-  width: 30px;
-  height: 25px;
+/* Footer Section */
+#footer {
+  background-color: #333; /* Dark background color */
+  color: #fff; /* White text color */
+  text-align: center; /* Center-align the content */
+padding: 10px 20px; /* Add padding */
+  font-size: 14px; /* Set font size */
 }
 
-.hamburger span {
-  width: 100%;
-  height: 4px;
-  background-color: #fff;
-  border-radius: 2px;
+#footer-nav ul {
+  list-style: none; /* Remove bullet points */
+  padding: 0; /* Remove padding */
+  margin: 0 0 10px 0; /* Add margin below the list */
+  display: flex; /* Use flexbox for horizontal layout */
+  justify-content: center; /* Center the list items */
+  gap: 20px; /* Add spacing between items */
 }
 
-/* Mobile Navbar */
-@media (max-width: 768px) {
-  #navbar ul {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgba(13, 9, 9, 0.8);
-    position: absolute;
-    top: 70px;
-    width: 100%;
-  }
+#footer-nav ul li a {
+  color: #fff; /* White text color */
+  text-decoration: none; /* Remove underline */
+  font-size: 14px; /* Set font size */
+  transition: color 0.3s ease; /* Smooth hover effect */
 }
 
-/* Show the navbar menu when active */
-#navbar ul.active {
+#footer-nav ul li a:hover {
+  color: orange; /* Change color on hover */
+}
+
+#footer-nav p {
+  margin: 10px 0 0; /* Add margin above the text */
+  font-size: 12px; /* Smaller font size for copyright */
+  color: #ccc; /* Light gray text color */
+}
+
+/* Footer Styling */
+#footer {
+  background-color: #333; /* Dark background color */
+  color: #fff; /* White text color */
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  justify-content: space-between;
+  gap: 20px;
 }
 
-/* Rotate hamburger lines when open */
-.hamburger.open span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
+.footer-col {
+  flex: 1 1 200px; /* Flexible width for columns */
+  margin: 10px;
 }
 
-.hamburger.open span:nth-child(2) {
-  opacity: 0;
+.footer-col h3 {
+  font-size: 25px;
+  margin-bottom: 15px;
+  color: #f4a261; /* Accent color for headings */
 }
 
-.hamburger.open span:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
-}
-/* Footer Section Styling */
-#footer {
-  position: relative;
-  width: 150%;
-  text-align: center;
-  margin-top: 50px;
-  overflow: hidden; /* Ensures the background doesn't overflow */
-  margin-bottom: 0px;
-}
-
-.footer-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/footer-background.jpeg) center/cover no-repeat;
-  filter: brightness(50%);
-  z-index: 1; /* Places the background behind the content */
-}
-
-
-.footer-content {
-  position: relative;
-  z-index: 2; /* Places the text above the background */
-  color: #ecf0f1; /* Light text color */
-}
-
-#footer .footer-content a {
-  color: #e67e22; /* Link color */
+.footer-col p, .footer-col ul, .footer-col a {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #ccc;
   text-decoration: none;
-  transition: color 0.3s ease;
 }
 
-#footer .footer-content a:hover {
-  color: #f39c12; /* Hover effect for links */
+.footer-col ul {
+  list-style: none; /* Remove bullet points */
+  padding: 0;
 }
 
-/* Sticky Footer Styling */
-#footer {
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: #37312700; /* Dark background */
-  color:white; /* Light text */
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a:hover {
+  color: #f4a261; /* Hover color for links */
+}
+
+.social-links a {
+  color: #fff; /* White color for social icons */
+  font-size: 20px;
+  margin-right: 10px;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #f4a261; /* Hover color for social icons */
+}
+
+.footer-bottom {
   text-align: center;
-  padding: 10px 0;
-  margin-top: 50px;
-  z-index: 1000;
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(10px); /* Optional: adds a blur effect */
-  transition: background-color 0.3s ease, color 0.3s ease;
-  
-
+  margin-top: 20px;
+  border-top: 1px solid #444; /* Top border for separation */
+  color: #ccc; /* Light gray text color */
 }
 
-#footer .footer-content p {
-  margin: 5px 0;
-  font-size: 0.9rem;
+.footer-bottom .designer-link {
+  color: #f4a261; /* Orange color for "Miran M. Haji" */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Make it bold */
 }
 
-#footer .footer-content a {
-  color: #ff8f2c; /* Link color */
-  text-decoration: none;
-  transition: color 0.3s ease;
+.footer-bottom .designer-link:hover {
+  color: #ff8724; /* Change color on hover */
 }
-
-#footer .footer-content a:hover {
-  color: #f39c12; /* Hover effect for links */
-}
-
-/* Order Section Styles */
-#order {
-    padding: 50px 20px;
-    background-color: #f9f9f9;
-    text-align: center;
-}
-
-#order-section, #cart-section {
-    margin: 20px auto;
-    max-width: 800px;
-    text-align: center;
-}
-
-.food-item {
-    display: inline-block;
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    text-align: center;
-    width: 200px;
-}
-
-.food-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-
-.food-item h3 {
-    font-size: 1.2rem;
-    margin: 10px 0;
-}
-
-.food-item p {
-    font-size: 1rem;
-    color: #555;
-}
-
-.food-item button {
-    padding: 10px 15px;
-    background-color: #ff6f61;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.food-item button:hover {
-    background-color: #e65b50;
-}
-
-#cart-items {
-    margin: 20px 0;
-    text-align: left;
-}
-
-/* Online Delivery Section */
-#delivery {
-    padding: 50px 20px;
-    background-color: #f9f9f9;
-    text-align: center;
-}
-
-#delivery-row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-
-.delivery-col {
-    flex: 1 1 45%;
-    max-width: 500px;
-    text-align: left;
-}
-
-#delivery h1 {
-  font-family: 'Poppins', sans-serif; /* Match font with Foods section */
-  font-size: 3rem; /* Adjust font size */
-  font-weight: 700;
-  color: #2c3e50; /* Dark text color */
-}
-
-#delivery h2 {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-    color: #555;
-}
-
-#delivery p {
-    font-size: 1rem;
-    color: #666;
-    margin-bottom: 20px;
-}
-
-#delivery .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #f39c12;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-}
-
-#delivery .btn:hover {
-    background-color: #e65b50;
-}
-
-#delivery-img img {
-    width: 100%;
-    max-width: 400px;
-    border-radius: 10px;
-}
-
-
-
