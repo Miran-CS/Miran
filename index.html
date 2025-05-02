@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Sazan Restaurant</title>
+    <title>Order Food - Sazan Restaurant</title>
 </head>
 <body>
     <div class="page-wrapper">
@@ -29,7 +29,7 @@
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#menu">Menu</a></li>
-                    <li><a href="#chef">Chef</a></li>
+                    <li><a href="#ourteams">Our Team</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#delivery">Online Delivery</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -134,7 +134,7 @@
                                 <img src="images/dinner3.jpg" alt="Dinner">
                             </div>
                             <div>
-                                <h3>Vegetarian Stir Fry</h3>
+                                <h3>Vegetarian Stir Fry</h4>
                                 <h4>18$</h4>
                             </div>
                         </div>
@@ -143,25 +143,22 @@
             </section>
 
             <!-- Chef Section -->
-            <div id="chef">
-                <h1 id="section-title">Chef</h1>
+            <div id="ourteams">
+                <h1 id="section-title">Our Team</h1>
                 <div class="chef-row">
                     <div class="chef-card">
                         <img src="images/1.png" alt="Chef Mohammed">
-                        <h4>Chef Mohammed</h4>
+                        <h4>Omer Waiter </h4>
                     </div>
                     <div class="chef-card">
                         <img src="images/2.png" alt="Chef Hussen">
-                        <h4>Chef Kharaza</h4>
+                        <h4>Chef kawa</h4>
                     </div>
                     <div class="chef-card">
                         <img src="images/3.png" alt="Chef Omer">
-                        <h4>Chef Omer</h4>
+                        <h4>Chef Darun </h4>
                     </div>
-                    <div class="chef-card">
-                        <img src="images/4.png" alt="kim jong un">
-                        <h4>Chef kim jong</h4>
-                    </div>
+
                 </div>
             </div>
 
@@ -188,7 +185,7 @@
                     <div class="delivery-col">
                         <h2>Order Your Favorite Meals</h2>
                         <p>Enjoy the taste of Sazan Restaurant from the comfort of your home. Place your order online and get it delivered to your doorstep.</p>
-                        <a href="#menu" class="btn">Order Now</a>
+                        <a href="#order" class="btn">Order Now</a>
                     </div>
                     <div class="delivery-col">
                         <div id="delivery-img">
@@ -197,6 +194,92 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Order Section -->
+            <section id="order">
+                <form id="order-form">
+                    <!-- Breakfast Section -->
+                    <h2>Breakfast</h2>
+                    <div class="food-row">
+                        <div class="food-item">
+                            <img src="images/breakfast1.jpg" alt="Classic Pancakes">
+                            <span>Classic Pancakes - $8</span>
+                            <input type="checkbox" name="food" value="8" class="food-item-checkbox">
+                        </div>
+                        <div class="food-item">
+                            <img src="images/breakfast2.jpg" alt="Scrambled Eggs & Toast">
+                            <span>Scrambled Eggs & Toast - $7</span>
+                            <input type="checkbox" name="food" value="7" class="food-item-checkbox">
+                        </div>
+                        <div class="food-item">
+                            <img src="images/breakfast3.jpg" alt="Omelette with Vegetables">
+                            <span>Omelette with Vegetables - $9</span>
+                            <input type="checkbox" name="food" value="9" class="food-item-checkbox">
+                        </div>
+                    </div>
+
+                    <!-- Lunch Section -->
+                    <h2>Lunch</h2>
+                    <div class="food-row">
+                        <div class="food-item">
+                            <img src="images/lunch1.jpg" alt="Grilled Chicken Salad">
+                            <span>Grilled Chicken Salad - $12</span>
+                            <input type="checkbox" name="food" value="12" class="food-item-checkbox">
+                        </div>
+                        <div class="food-item">
+                            <img src="images/lunch2.jpg" alt="Pasta Primavera">
+                            <span>Pasta Primavera - $14</span>
+                            <input type="checkbox" name="food" value="14" class="food-item-checkbox">
+                        </div>
+                        <div class="food-item">
+                            <img src="images/lunch3.jpg" alt="BBQ Beef Sandwich">
+                            <span>BBQ Beef Sandwich - $16</span>
+                            <input type="checkbox" name="food" value="16" class="food-item-checkbox">
+                        </div>
+                    </div>
+
+                    <!-- Dinner Section -->
+                    <h2>Dinner</h2>
+                    <div class="food-row">
+                        <div class="food-item">
+                            <img src="images/dinner1.jpg" alt="Steak with Mashed">
+                            <span>Steak with Mashed - $25</span>
+                            <input type="checkbox" name="food" value="25" class="food-item-checkbox">
+                        </div>
+                        <div class="food-item">
+                            <img src="images/dinner2.jpg" alt="Salmon with Asparagus">
+                            <span>Salmon with Asparagus - $22</span>
+                            <input type="checkbox" name="food" value="22" class="food-item-checkbox">
+                        </div>
+                        <div class="food-item">
+                            <img src="images/dinner3.jpg" alt="Vegetarian Stir Fry">
+                            <span>Vegetarian Stir Fry - $18</span>
+                            <input type="checkbox" name="food" value="18" class="food-item-checkbox">
+                        </div>
+                    </div>
+
+                    <!-- Total Price Section -->
+                    <h2>Total Price: $<span id="total-price">0</span></h2>
+                    <button type="button" class="btn" id="calculate-total">Total Price</button>
+
+                    <!-- Contact Information -->
+                    <h2>Contact Information</h2>
+                    <div class="form-group">
+                        <label for="name">Full Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Delivery Address:</label>
+                        <textarea id="address" name="address" placeholder="Enter your delivery address" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn">Place Order</button>
+                </form>
+            </section>
 
             <!-- Contact Section -->
             <div id="contact">
@@ -237,12 +320,12 @@
                 <div class="footer-col">
                     <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#menu">Menu</a></li>
-                        <li><a href="#chef">Chef</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#delivery">Delivery</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#menu">Menu</a></li>
+                        <li><a href="chefs.html">Chef</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#delivery">Delivery</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
                     </ul>
                 </div>
         
@@ -265,12 +348,34 @@
                     </div>
                 </div>
             </div>
+        
             <!-- Footer Bottom Section -->
             <div class="footer-bottom">
                 <p>© 2025 Sazan Restaurant | Designed by <a href="https://www.facebook.com/" target="_blank" class="designer-link">Miran M. Haji</a></p>
             </div>
         </nav>
     </footer>
+
+    <script>
+        // Get all food item checkboxes and the total price element
+        const foodItems = document.querySelectorAll('.food-item-checkbox');
+        const totalPriceElement = document.getElementById('total-price');
+        const calculateTotalButton = document.getElementById('calculate-total');
+
+        // Function to calculate the total price
+        function calculateTotalPrice() {
+            let total = 0;
+            foodItems.forEach(item => {
+                if (item.checked) {
+                    total += parseFloat(item.value); // Add the value of the checked item
+                }
+            });
+            totalPriceElement.textContent = total.toFixed(2); // Update the total price display
+        }
+
+        // Add event listener to the "Calculate Total Price" button
+        calculateTotalButton.addEventListener('click', calculateTotalPrice);
+    </script>
 </body>
 </html>
 
