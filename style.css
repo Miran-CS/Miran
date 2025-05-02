@@ -766,15 +766,15 @@ button.btn:hover {
     width: 100%; /* Make input fields take full width */
     max-width: 400px; /* Set a maximum width for input fields */
     padding: 10px; /* Add padding inside input fields */
-    font-size: 1rem; /* Set consistent font size for input fields */
+    font-size: 1.2rem; /* Set consistent font size for input fields */
     border: 1px solid #ccc; /* Add a border */
-    border-radius: 5px; /* Add rounded corners */
+    border-radius: 1cap; /* Add rounded corners */
     box-sizing: border-box; /* Include padding and border in width/height */
 }
 
 textarea {
-    resize: vertical; /* Allow vertical resizing only */
-    height: 100px; /* Set a default height for textareas */
+    resize:vertical; /* Allow vertical resizing only */
+    height: 80px; /* Set a default height for textareas */
 }
 
 button.btn {
