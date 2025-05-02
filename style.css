@@ -532,7 +532,140 @@ color: #2c3e50; /* Dark text color */
   text-align: left;
 }
 
-  /* Contact Section Styling */
+/* Order Section Styling */
+#order {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#order h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+#order-form {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.form-group label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    color: #333;
+    cursor: pointer;
+    width: 100%;
+    max-width: 300px;
+}
+
+.form-group img {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    object-fit: cover;
+    border: 1px solid #ccc;
+}
+
+.form-group input[type="checkbox"] {
+    margin-left: 10px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #f4a261;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e76f51;
+}
+
+/* Style all checkboxes to have the same size */
+input[type="checkbox"] {
+    width: 20px; /* Set the width */
+    height: 20px; /* Set the height */
+    cursor: pointer; /* Add a pointer cursor for better UX */
+    margin-right: 10px; /* Add spacing between the checkbox and the label text */
+}
+
+/* Center the section headings (Breakfast, Lunch, Dinner) */
+#order h2 {
+    text-align: center; /* Center the text horizontally */
+    font-size: 1.8rem; /* Adjust font size if needed */
+    margin-bottom: 20px; /* Add spacing below the heading */
+    color: #2c3e50; /* Optional: Change the text color */
+}
+
+/* Center the Calculate Total Price button */
+#calculate-total {
+    display: block; /* Make the button a block element */
+    margin: 20px auto; /* Center horizontally and add spacing */
+    padding: 10px 20px; /* Add padding for better appearance */
+    font-size: 1rem; /* Adjust font size */
+    background-color: #f4a261; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s ease; /* Add hover transition */
+}
+
+#calculate-total:hover {
+    background-color: #e76f51; /* Change button color on hover */
+}
+
+/* Center the Contact Information section */
+#order-form {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center-align elements horizontally */
+    justify-content: center; /* Center-align elements vertically */
+    text-align: center; /* Center-align text */
+    margin: 0 auto; /* Center the form on the page */
+    max-width: 600px; /* Set a maximum width for the form */
+}
+
+.form-group {
+    width: 100%; /* Make input fields take full width */
+    max-width: 400px; /* Set a maximum width for input fields */
+    margin-bottom: 20px; /* Add spacing between form fields */
+}
+
+button.btn {
+    display: block; /* Make the button a block element */
+    margin: 20px auto; /* Center horizontally and add spacing */
+    padding: 10px 20px; /* Add padding for better appearance */
+    font-size: 1rem; /* Adjust font size */
+    background-color: #f4a261; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s ease; /* Add hover transition */
+}
+
+button.btn:hover {
+    background-color: #e76f51; /* Change button color on hover */
+}
+
+/* Contact Section Styling */
 #contact {
   padding: 200px 20px; /* Updated padding */
   background-color: #f5f5f5;
@@ -614,6 +747,52 @@ color: #2c3e50; /* Dark text color */
   }
 }
 
+/* Contact Information Styling */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 1rem; /* Set consistent font size for labels */
+    font-weight: bold; /* Make labels bold */
+    margin-bottom: 5px; /* Add spacing below the label */
+    color: #333; /* Set label text color */
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%; /* Make input fields take full width */
+    max-width: 400px; /* Set a maximum width for input fields */
+    padding: 10px; /* Add padding inside input fields */
+    font-size: 1rem; /* Set consistent font size for input fields */
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 5px; /* Add rounded corners */
+    box-sizing: border-box; /* Include padding and border in width/height */
+}
+
+textarea {
+    resize: vertical; /* Allow vertical resizing only */
+    height: 100px; /* Set a default height for textareas */
+}
+
+button.btn {
+    width: auto; /* Allow the button to size dynamically */
+    padding: 10px 20px; /* Add padding for the button */
+    font-size: 1rem; /* Set consistent font size */
+    background-color: #f4a261; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s ease; /* Add hover transition */
+}
+
+button.btn:hover {
+    background-color: #e76f51; /* Change button color on hover */
+}
+
 /* Footer Section */
 #footer {
   background-color: #333; /* Dark background color */
@@ -651,7 +830,7 @@ padding: 10px 20px; /* Add padding */
 
 /* Footer Styling */
 #footer {
-  background-color: #333; /* Dark background color */
+  background-color: #333333d1; /* Dark background color */
   color: #fff; /* White text color */
   font-family: 'Poppins', sans-serif;
 }
@@ -720,4 +899,61 @@ padding: 10px 20px; /* Add padding */
 
 .footer-bottom .designer-link:hover {
   color: #ff8724; /* Change color on hover */
+}
+
+#total-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-top: 10px;
+}
+
+/* Food Row Styling for Horizontal Layout */
+.food-row {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping to the next row if space is limited */
+    gap: 20px; /* Add spacing between items */
+    justify-content: center; /* Center the items horizontally */
+    margin-bottom: 30px;
+}
+
+.food-item {
+    display: flex;
+    flex-direction: column; /* Stack image, text, and checkbox vertically */
+    align-items: center; /* Center-align content */
+    gap: 10px; /* Add spacing between elements */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #fff;
+    width: 200px; /* Set a fixed width for each item */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center-align text */
+}
+
+.food-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    object-fit: cover;
+    border: 1px solid #ccc;
+}
+
+.food-item span {
+    font-size: 1rem;
+    color: #333;
+}
+
+.food-item input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+/* Center the "Our Team" text */
+#ourteams h1 {
+    text-align: center; /* Center the text horizontally */
+    font-size: 2.5rem; /* Adjust font size if needed */
+    margin-bottom: 20px; /* Add spacing below the heading */
+    color: #2c3e50; /* Optional: Change the text color */
 }
