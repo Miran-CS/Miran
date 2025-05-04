@@ -432,7 +432,8 @@ body {
 .delivery-col {
   flex: 1 1 45%;
   max-width: 500px;
-  text-align: left;
+  text-align: center;
+
 }
 
 #delivery h1 {
@@ -611,6 +612,7 @@ input[type="checkbox"] {
     font-size: 1.8rem; /* Adjust font size if needed */
     margin-bottom: 20px; /* Add spacing below the heading */
     color: #2c3e50; /* Optional: Change the text color */
+    margin-top: 30px; /* Add space above each meal section title */
 }
 
 /* Center the Calculate Total Price button */
@@ -911,10 +913,10 @@ padding: 10px 20px; /* Add padding */
 /* Food Row Styling for Horizontal Layout */
 .food-row {
     display: flex;
-    flex-wrap: wrap; /* Allow wrapping to the next row if space is limited */
-    gap: 20px; /* Add spacing between items */
-    justify-content: center; /* Center the items horizontally */
-    margin-bottom: 30px;
+    flex-wrap: nowrap; /* Prevent wrapping */
+    justify-content: space-between; /* Add spacing between items */
+    gap: 20px; /* Optional: Add spacing between items */
+    margin-bottom: 40px; /* Add space between each meal section */
 }
 
 .food-item {
@@ -929,6 +931,8 @@ padding: 10px 20px; /* Add padding */
     width: 200px; /* Set a fixed width for each item */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center; /* Center-align text */
+    flex: 1; /* Ensure items take equal space */
+    margin: 0 10px; /* Add space between individual food items */
 }
 
 .food-item img {
